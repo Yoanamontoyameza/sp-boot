@@ -1,0 +1,11 @@
+spring:
+  application:
+  name: autopart
+  datasource:
+    url: jdbc:sqlserver://dbAutoIn.mssql.somee.com;databaseName=dbAutoIn
+    username: IntegradoraPro_SQLLogin_1
+    password: jmn56sp8cz
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    show-sql: false
