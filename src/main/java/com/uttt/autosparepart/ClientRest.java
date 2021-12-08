@@ -30,7 +30,7 @@ public class ClientRest {
 
     @PostMapping(value = "/update", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<ClientDO> update(@RequestBody ClientDO clientDO) {
-        return new ResponseEntity<>(clientService.save(clientDO), HttpStatus.OK) ;
+        return new ResponseEntity<>(clientService.update(clientDO), HttpStatus.OK) ;
     }
 
     @GetMapping(value = "/sendCode", produces = MediaType.APPLICATION_JSON_VALUE)
