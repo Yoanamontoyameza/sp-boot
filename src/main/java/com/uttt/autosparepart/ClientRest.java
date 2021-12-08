@@ -28,6 +28,11 @@ public class ClientRest {
         return new ResponseEntity<>(clientService.save(clientDO), HttpStatus.OK) ;
     }
 
+    @PostMapping(value = "/update", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<ClientDO> update(@RequestBody ClientDO clientDO) {
+        return new ResponseEntity<>(clientService.save(clientDO), HttpStatus.OK) ;
+    }
+
     @GetMapping(value = "/sendCode", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<ResponseTO> sendCode(String email) {
         return new ResponseEntity<>(clientService.sendCode(email), HttpStatus.OK) ;

@@ -42,6 +42,11 @@ public class ClientService implements ClientServiceI {
     }
 
     @Override
+    public ClientDO update(ClientDO clientDO) {
+         return clientRepository.save(clientDO);
+    }
+
+    @Override
     public ClientDO login(String email, String password) {
 
         ClientDO clientDO = this.clientRepository.findByEmail(email);

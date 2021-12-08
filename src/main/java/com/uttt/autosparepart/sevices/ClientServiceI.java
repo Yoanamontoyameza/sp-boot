@@ -5,6 +5,7 @@ import com.uttt.autosparepart.entities.ResponseTO;
 
 public interface ClientServiceI {
     ClientDO save(ClientDO clientDO);
+    ClientDO update(ClientDO clientDO);
     ClientDO login(String email, String password);
     void sendSimpleMessage(String email, String code);
     ResponseTO sendCode(String email);
